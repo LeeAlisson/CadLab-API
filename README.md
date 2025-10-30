@@ -38,7 +38,6 @@ O sistema é composto por:
 ### Backend
 - **Node.js + TypeScript**
 - **Express.js**
-- **TypeORM**
 - **JWT (jsonwebtoken)**
 - **Swagger (swagger-ui-express + swagger-jsdoc)**
 - **Docker**
