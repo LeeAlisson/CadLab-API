@@ -2,12 +2,15 @@
 
 ## 📘 Descrição do Projeto
 
-O **Sistema de Gerenciamento de Laboratórios** tem como objetivo facilitar o **cadastro, controle e agendamento de uso de laboratórios** dentro de uma instituição.  
-A aplicação permite gerenciar **laboratórios**, **usuários** e **reservas**, garantindo que o uso dos espaços seja feito de forma organizada, respeitando a **capacidade** e **disponibilidade** de cada ambiente.
+O **Sistema de Gerenciamento de Salas** tem como objetivo facilitar o **cadastro, controle e agendamento de uso de Salas** dentro de uma instituição.  
+A aplicação permite gerenciar **Salas**, **usuários**, **reservas** e **disponibilidade das salas**, garantindo que o uso dos espaços seja feito de forma organizada, respeitando a **capacidade** e **disponibilidade** de cada ambiente.
 
 O sistema é composto por:
-- **Frontend Web** (React ou similar): interface para interação dos usuários.
+- **Frontend Web** (NEXT.js): interface para interação dos usuários.
 - **Backend API (TypeScript)**: responsável pela lógica de negócios, autenticação e persistência de dados.
+- **GitHub Actions** – Continuous Deployment (CD)
+- **Docker Compose** – Hospedagem da API
+- **PostgreSQL** - Banco de dados
 
 ---
 
@@ -42,11 +45,6 @@ O sistema é composto por:
 - **Swagger (swagger-ui-express + swagger-jsdoc)**
 - **Docker**
 - **PostgreSQL**
-
-### Infraestrutura
-- **GitHub Actions** – Continuous Deployment (CD)
-- **Render / Railway / Vercel / AWS (a definir)** – Hospedagem da API
-- **Frontend publicado** (por exemplo, no Vercel) consumindo a API na nuvem
 
 ---
 
