@@ -38,8 +38,7 @@ O sistema é composto por:
 
 ## 🧠 Tecnologias Utilizadas
 
-### Backend
-- **Node.js + TypeScript**
+- **Next.js + TypeScript**
 - **Express.js**
 - **JWT (jsonwebtoken)**
 - **Swagger (swagger-ui-express + swagger-jsdoc)**
