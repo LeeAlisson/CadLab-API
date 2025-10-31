@@ -20,7 +20,13 @@ export class AuthController {
       const user = repo.create({ name, email, password: hashed });
       await repo.save(user);
 
-      return res.status(201).json({ message: "Usuário criado com sucesso" });
+      const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, {
+        expiresIn: "8h",
+      });
+
+      return res
+        .status(201)
+        .json({ message: "Usuário criado com sucesso", token });
     } catch (error) {
       return res.status(500).json({ error });
     }
