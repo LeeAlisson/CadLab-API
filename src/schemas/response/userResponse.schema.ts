@@ -1,4 +1,4 @@
-export const UserSchema = {
+export const UserSchemaResponse = {
   type: "object",
   properties: {
     id: {
@@ -21,7 +21,7 @@ export const UserSchema = {
       type: "array",
       description: "Lista de agendamentos associados ao usuário",
       items: {
-        $ref: "#/components/schemas/Booking",
+        $ref: "#/components/schemas/BookingSchemaResponse",
       },
     },
     createdAt: {

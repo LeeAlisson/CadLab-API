@@ -21,7 +21,7 @@ router.use(authenticateJWT);
  *            schema:
  *              type: array
  *              items:
- *                $ref: '#/components/schemas/Booking'
+ *                $ref: '#/components/schemas/BookingSchemaResponse'
  */
 router.get("/", BookingController.getAll);
 
@@ -48,7 +48,7 @@ router.get("/", BookingController.getAll);
  *            schema:
  *              type: array
  *              items:
- *                $ref: '#/components/schemas/Booking'
+ *                $ref: '#/components/schemas/BookingSchemaResponse'
  */
 router.get("/room/:roomId", BookingController.getByRoom);
 
@@ -75,7 +75,7 @@ router.get("/room/:roomId", BookingController.getByRoom);
  *            schema:
  *              type: array
  *              items:
- *                $ref: '#/components/schemas/Booking'
+ *                $ref: '#/components/schemas/BookingSchemaResponse'
  */
 router.get("/user/:userId", BookingController.getByUser);
 
@@ -92,14 +92,14 @@ router.get("/user/:userId", BookingController.getByUser);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Booking'
+ *             $ref: '#/components/schemas/BookingSchemaRequest'
  *     responses:
  *      201:
  *        description: Booking created successfully
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/components/schemas/Booking'
+ *              $ref: '#/components/schemas/BookingSchemaResponse'
  */
 router.post("/", BookingController.create);
 

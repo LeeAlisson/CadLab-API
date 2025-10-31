@@ -1,5 +1,4 @@
-// src/swagger/schemas.ts
-export const BookingSchema = {
+export const BookingSchemaResponse = {
   type: "object",
   properties: {
     id: {
@@ -61,11 +60,11 @@ export const BookingSchema = {
       description: "Data da última atualização do registro",
     },
     room: {
-      $ref: "#/components/schemas/Room",
+      $ref: "#/components/schemas/RoomSchemaResponse",
       description: "Dados da sala associada (objeto Room completo)",
     },
     user: {
-      $ref: "#/components/schemas/User",
+      $ref: "#/components/schemas/UserSchemaResponse",
       description: "Dados do usuário associado (objeto User completo)",
     },
   },

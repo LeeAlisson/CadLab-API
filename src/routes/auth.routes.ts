@@ -42,7 +42,7 @@ const router = Router();
  *                 token:
  *                   type: string
  *                 user:
- *                   $ref: '#/components/schemas/User'
+ *                   $ref: '#/components/schemas/UserSchemaRequest'
  *       401:
  *         description: Unauthorized
  */
@@ -83,7 +83,7 @@ router.post("/register", AuthController.register);
  *                 token:
  *                   type: string
  *                 user:
- *                   $ref: '#/components/schemas/User'
+ *                   $ref: '#/components/schemas/UserSchemaRequest'
  *       400:
  *         description: Bad Request
  */

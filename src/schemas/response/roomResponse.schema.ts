@@ -1,4 +1,4 @@
-export const RoomSchema = {
+export const RoomSchemaResponse = {
   type: "object",
   properties: {
     id: {
@@ -21,7 +21,7 @@ export const RoomSchema = {
     lab: {
       type: "object",
       description: "Laboratório ao qual a sala pertence",
-      $ref: "#/components/schemas/Lab",
+      $ref: "#/components/schemas/LabSchemaResponse",
     },
     labId: {
       type: "integer",
@@ -32,7 +32,7 @@ export const RoomSchema = {
       type: "array",
       description: "Lista de reservas associadas à sala",
       items: {
-        $ref: "#/components/schemas/Booking",
+        $ref: "#/components/schemas/BookingSchemaResponse",
       },
     },
     createdAt: {

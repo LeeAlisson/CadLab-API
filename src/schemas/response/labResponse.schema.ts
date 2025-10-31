@@ -1,4 +1,4 @@
-export const LabSchema = {
+export const LabSchemaResponse = {
   type: "object",
   properties: {
     id: {
@@ -25,7 +25,7 @@ export const LabSchema = {
       type: "array",
       description: "Lista de salas associadas ao laboratório",
       items: {
-        $ref: "#/components/schemas/Room",
+        $ref: "#/components/schemas/RoomSchemaResponse",
       },
     },
     createdAt: {

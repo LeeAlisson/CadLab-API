@@ -21,7 +21,7 @@ router.use(authenticateJWT);
  *            schema:
  *              type: array
  *              items:
- *                $ref: '#/components/schemas/Lab'
+ *                $ref: '#/components/schemas/LabSchemaResponse'
  */
 router.get("/", LabController.getAll);
 
@@ -46,7 +46,7 @@ router.get("/", LabController.getAll);
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/components/schemas/Lab'
+ *              $ref: '#/components/schemas/LabSchemaResponse'
  */
 router.get("/:id", LabController.getOne);
 
@@ -63,14 +63,14 @@ router.get("/:id", LabController.getOne);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Lab'
+ *             $ref: '#/components/schemas/LabSchemaRequest'
  *     responses:
  *      201:
  *        description: Lab created successfully
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/components/schemas/Lab'
+ *              $ref: '#/components/schemas/LabSchemaRequest'
  */
 router.post("/", LabController.create);
 
@@ -94,14 +94,14 @@ router.post("/", LabController.create);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Lab'
+ *             $ref: '#/components/schemas/LabSchemaRequest'
  *     responses:
  *      200:
  *        description: Lab updated successfully
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/components/schemas/Lab'
+ *              $ref: '#/components/schemas/LabSchemaResponse'
  */
 router.put("/:id", LabController.update);
 

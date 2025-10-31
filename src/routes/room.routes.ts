@@ -22,7 +22,7 @@ router.use(authenticateJWT);
  *             schema:
  *               type: array
  *               items:
- *                 $ref: '#/components/schemas/Room'
+ *                 $ref: '#/components/schemas/RoomSchemaResponse'
  */
 router.get("/", RoomController.getAll);
 
@@ -50,7 +50,7 @@ router.get("/", RoomController.getAll);
  *             schema:
  *               type: array
  *               items:
- *                 $ref: '#/components/schemas/Room'
+ *                 $ref: '#/components/schemas/RoomSchemaResponse'
  */
 router.get("/lab/:labId", RoomController.getByLab);
 
@@ -68,14 +68,14 @@ router.get("/lab/:labId", RoomController.getByLab);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Room'
+ *             $ref: '#/components/schemas/RoomSchemaRequest'
  *     responses:
  *       201:
  *         description: Room created successfully
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Room'
+ *               $ref: '#/components/schemas/RoomSchemaResponse'
  */
 router.post("/", RoomController.create);
 
@@ -100,14 +100,14 @@ router.post("/", RoomController.create);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Room'
+ *             $ref: '#/components/schemas/RoomSchemaRequest'
  *     responses:
  *       200:
  *         description: Room updated successfully
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Room'
+ *               $ref: '#/components/schemas/RoomSchemaResponse'
  */
 router.put("/:id", RoomController.update);
 

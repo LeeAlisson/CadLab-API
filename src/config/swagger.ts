@@ -1,8 +1,5 @@
 import swaggerJSDoc from "swagger-jsdoc";
-import { UserSchema } from "../schemas/user.schema";
-import { LabSchema } from "../schemas/lab.schema";
-import { RoomSchema } from "../schemas/room.schema";
-import { BookingSchema } from "../schemas/booking.schema";
+import { Schemas } from "../schemas/index";
 
 const options = {
   definition: {
@@ -21,10 +18,7 @@ const options = {
         },
       },
       schemas: {
-        User: UserSchema,
-        Lab: LabSchema,
-        Room: RoomSchema,
-        Booking: BookingSchema,
+        ...Schemas,
       },
     },
     servers: [
