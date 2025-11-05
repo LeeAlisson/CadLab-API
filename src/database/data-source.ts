@@ -9,13 +9,12 @@ import { Booking } from "../models/Booking";
 dotenv.config();
 
 export const AppDataSource = new DataSource({
-  type: process.env.DB_TYPE as any,
-  host: process.env.DB_HOST,
-  port: Number(process.env.DB_PORT),
-  username: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  synchronize: true,
-  logging: false,
+  type: "postgres",
+  url: process.env.DATABASE_URL, 
+  synchronize: false,
+  logging: true,
   entities: [User, Lab, Room, Booking],
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
